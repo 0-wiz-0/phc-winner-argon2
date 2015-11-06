@@ -20,9 +20,9 @@ genkat_SOURCES=		genkat.c
 genkat_LDADD=		libargon2.la
 
 EXTRA_DIST=		blake2/blake2-impl.h blake2/lake2.h blake2/blake2b.c blake2/blamka-round-opt.h blake2/blamka-round-ref.h
-noinst_HEADERS=		argon2.h core.h genkat.h opt.h ref.h thread.h
+noinst_HEADERS=		argon2.h core.h encoding.h genkat.h opt.h ref.h thread.h
 
-libargon2_la_SOURCES=	argon2.c core.c blake2/blake2b.c thread.c
+libargon2_la_SOURCES=	argon2.c core.c encoding.c blake2/blake2b.c thread.c
 if COND_OPT
 libargon2_la_SOURCES+=	opt.c
 else
