@@ -18,7 +18,6 @@ AM_INIT_AUTOMAKE
 #AM_SILENT_RULES([yes])
 AC_PROG_LIBTOOL
 
-#AX_CFLAGS_FORCE_C89
 AX_PTHREAD
 
 # create all Makefiles (e.g., for 'make dist')

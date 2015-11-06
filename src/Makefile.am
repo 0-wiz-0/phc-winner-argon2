@@ -30,7 +30,7 @@ libargon2_la_SOURCES+=	ref.c
 endif
 
 AM_LDFLAGS=	$(PTHREAD_LIBS)
-AM_CFLAGS=	-std=c89 $(PTHREAD_CFLAGS)
+AM_CFLAGS=	$(PTHREAD_CFLAGS)
 CC=		$(PTHREAD_CC)
 
 format:
