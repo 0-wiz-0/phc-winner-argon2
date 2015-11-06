@@ -29,7 +29,9 @@ else
 libargon2_la_SOURCES+=	ref.c
 endif
 
-AM_CFLAGS=	-std=c89 -pthread
+AM_LDFLAGS=	$(PTHREAD_LIBS)
+AM_CFLAGS=	-std=c89 $(PTHREAD_CFLAGS)
+CC=		$(PTHREAD_CC)
 
 format:
 		clang-format -style="{BasedOnStyle: llvm, IndentWidth: 4}" -i *.c *.h blake2/*.c blake2/*.h
